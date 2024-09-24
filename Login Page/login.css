@@ -1,0 +1,147 @@
+:root {
+    /* Color Variables */
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --text-color: #333;
+    --background-color: #f0f0f0;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: #ccc;
+    --forgot-password-color: #007bff;
+    --google-hover-color: #db4437;
+    --microsoft-hover-color: #0078d4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 1200px;
+}
+
+.row {
+    display: flex;
+    gap: 50px;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.header h1 {
+    color: var(--primary-color);
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.header p {
+    padding: 0.10rem 0rem;
+    margin-top: 0.5rem;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.login-box {
+    background-color: white;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    width: 400px;
+    box-shadow: 0 0 10px var(--box-shadow-color);
+    border-radius: 10px;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box label {
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.login-box input {
+    padding: 0.8rem;
+    margin-top: 0.3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-box .forgot-password {
+    text-align: right;
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+    color: var(--forgot-password-color);
+    text-decoration: none;
+}
+
+.login-box .forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.divider {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #999;
+    text-align: center;
+}
+
+.login-google, .login-microsoft {
+    background-color: #fff;
+    color: var(--text-color);
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.login-google:hover {
+    border-color: var(--google-hover-color);
+}
+
+.login-microsoft:hover {
+    border-color: var(--microsoft-hover-color);
+}
+
+button img {
+    width: 25px;
+}
+
+form button {
+    gap: 20px;
+}

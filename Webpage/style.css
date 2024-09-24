@@ -1,0 +1,229 @@
+:root {
+    /* Color Variables */
+    --primary-bg-color-logo: #0d568f;
+    --primary-bg-color: #0078d4;
+    --primary-text-color: #fff;
+    --secondary-text-color: #333;
+    --nav-hover-color: #f0f0f0;
+    --sidebar-bg-color: #333;
+    --sidebar-hover-bg-color: #616161;
+    --content-bg-color: #f4f4f4;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --dropdown-bg-color: #fff;
+    --dropdown-hover-bg-color: #f4f4f4;
+}
+
+/* Universal styles */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    padding: 15px 10px;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px var(--box-shadow-color);
+}
+
+.nav-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 7%;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* nav-item-container Picture and Dropdown */
+.nav-item-container {
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+
+.gap-nav {
+    gap: 30px;
+}
+.nav-text {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-text a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-text a:hover,
+.nav-text .active {
+    color: var(--nav-hover-color);
+    border-bottom: 2px solid var(--nav-hover-color);
+}
+
+.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--primary-text-color);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--dropdown-bg-color);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.dropdown ul li {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.dropdown ul li a {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+}
+
+.dropdown ul li:hover {
+    background-color: var(--dropdown-hover-bg-color);
+}
+
+.profile:hover .dropdown {
+    display: block;
+}
+
+/* Sidebar Styling */
+.section-container {
+    display: flex;
+    margin-top: 70px; 
+}
+
+.section-container .col-1 {
+    width: 8%;
+    background-color: var(--sidebar-bg-color);
+    color: var(--primary-text-color);
+    min-height: 100vh;
+}
+
+.sidebar .sidebar-item {
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    /* display: flex; */
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.sidebar .sidebar-item i {
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.sidebar .sidebar-item:hover {
+    color: var(--primary-text-color);
+    font-size: 1.1rem;
+    background-color: var(--sidebar-hover-bg-color);
+}
+
+.col-11 {
+    width: 92%;
+    padding: 20px;
+    background-color: var(--content-bg-color);
+}
+
+.content {
+    font-size: 18px;
+}
+
+#content h2 {
+    font-size: 24px;
+}
+
+#content p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-item-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    .nav-text {
+        gap: 15px;
+        margin-top: 10px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav-text a {
+        font-size: 0.9rem;
+    }
+
+    .profile-pic {
+        margin-top: 10px;
+    }
+
+    /* Stack sidebar below the navbar on smaller screens */
+    .section-container {
+        flex-direction: column;
+    }
+
+    .col-1, .col-11 {
+        width: 100%;
+    }
+
+    .col-1 {
+        padding: 10px;
+        min-height: auto;
+    }
+
+    .col-11 {
+        padding: 15px;
+    }
+}

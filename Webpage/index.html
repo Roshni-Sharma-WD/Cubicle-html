@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubicle Hire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Cubicle</h1>
+            </div>
+            <div class="nav-item-container gap-nav">
+                <div class="nav-text">
+                    <a href="#home">Home</a>
+                    <a href="#order">Order</a>
+                    <a href="#review">Review</a>
+                    <a href="#about">About</a>
+                </div>
+                <div class="profile">
+                    <img src="./images/ProfilePic.jpg" alt="Profile" class="profile-pic">
+                    <div class="dropdown">
+                        <ul>
+                            <li><a href="#">View Profile</a></li>
+                            <li><a href="#">Change Password</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="section-container">
+            <div class="col-1">
+                <div class="sidebar">
+                    <div class="sidebar-item" data-target="home">
+                        <i class="fa-solid fa-house"></i>
+                        <p>Home</p>
+                    </div>
+                    <div class="sidebar-item" data-target="profile">
+                        <i class="fa-regular fa-user"></i>
+                        <p>Profile</p>
+                    </div>
+                    <div class="sidebar-item" data-target="messages">
+                        <i class="fas fa-envelope"></i>
+                        <p>Messages</p>
+                    </div>
+                    <div class="sidebar-item" data-target="settings">
+                        <i class="fas fa-cog"></i>
+                        <p> Settings</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11">
+                <div id="content" class="content">
+                    <h2>Welcome!</h2>
+                    <p>Select an option from the sidebar to view content here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
